@@ -63,15 +63,8 @@
             <ul>
                 <?php
                 foreach ($hotels as $hotel) {
-                    echo '<li> .$hotel[0] </li>';
+                    echo '<li>' .$hotel['name']. ' - '.$hotel['description']. ' - ' .$hotel['parking']. ' - ' .$hotel['vote']. ' - ' .$hotel['distance_to_center'] .'</li>';
                 }
-                ?>
-            </ul>
-            <ul>
-                <?php
-                    foreach ($hotels as $ind => $singleListProduct) {
-                        echo '<li>'.$ind.') '.$singleListProduct.'</li>';
-                    }
                 ?>
             </ul>
         </main>
