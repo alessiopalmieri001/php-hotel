@@ -63,11 +63,40 @@
         <main>
             <ul>
                 <?php
-                foreach ($hotels as $hotel) {
-                    echo '<li>' .$hotel['name']. ' - '.$hotel['description']. ' - ' .$hotel['parking']. ' - ' .$hotel['vote']. ' - ' .$hotel['distance_to_center'] .'</li>';
-                }
+                    foreach ($hotels as $hotel) {
+                        echo '<li>' .$hotel['name']. ' - '.$hotel['description']. ' - ' .$hotel['parking']. ' - ' .$hotel['vote']. ' - ' .$hotel['distance_to_center'] .'</li>';
+                    }
                 ?>
             </ul>
+            <div class="container">
+                <div class='d-flex flex-wrap justify-content-center'>
+                    <h3 class="mt-4">Hotel Disponibili</h3>
+                    <table class='table text-capitalize'>
+                        <thead>
+                            <tr>
+                                <th class='col'>name</th>
+                                <th class='col'>description</th>
+                                <th class='col'>parking</th>
+                                <th class='col'>vote</th>
+                                <th class='col'>distance of center</th>
+                            </tr>
+                        </thead>
+                            <?php foreach($hotels as $hotel) { 
+                                $park=$hotel['parking']? 'si':'no';
+                            ?>
+                        <tr>
+                            <td><?php echo $hotel['name']; ?></td>
+                            <td><?php echo $hotel['description']; ?></td>
+                            <td><?php echo $park; ?></td>
+                            <td><?php echo $hotel['vote']; ?></td>
+                            <td><?php echo $hotel['distance_to_center']; ?></td>
+                        </tr>
+                            <?php
+                            }
+                            ?>
+                    </table>
+                </div>
+            </div>        
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>       
     </body>
