@@ -39,7 +39,7 @@
         ],
 
     ];
-
+    
 ?>
 
 <?php 
@@ -82,7 +82,7 @@
                             </tr>
                         </thead>
                             <?php foreach($hotels as $hotel) { 
-                                $park=$hotel['parking']? 'si':'no';
+                                $park=$hotel['parking'] ? 'si':'no';
                             ?>
                         <tr>
                             <td><?php echo $hotel['name']; ?></td>
